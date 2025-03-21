@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/index.css">
+  <title>Forex Calculator </title>
+</head>
+<body>
+  <div class="contents-div">
+	<h1>Calculating Target</h1>
+
+	
+	<table>
+	  <thead>
+	    <tr>
+	      <th>Deposit</th>
+	      <th>Percentage</th>
+	      <th>Target</th>
+	    </tr>
+	  </thead>
+	  <tbody>
+	    <tr>
+	      <td>R1,000</td>
+	      <td>1,000%</td>
+	      <td>R9,000</td>
+	    </tr>
+	    <tr>
+	      <td>R1,000</td>
+	      <td>10,000%</td>
+	      <td>R99,000</td>
+	    </tr>
+	    <tr>
+	      <td>R1,000</td>
+	      <td>100,000%</td>
+	      <td>R999,000</td>
+	    </tr>
+	  </tbody>
+	</table>
+	
+	<hr>
+	<p class="description-text">When calculating the target you dont include your deposit.For example if you deposit <b>R1,000</b> and you target <b>1,000%</b> you are targeting <b>R9,000</b> .If you include your capital it will be <b>R10,000</b></p>
+	<hr>
+	<div id="results-div">
+	  <p id="deposit-result"></p>
+	  <p id="percentage-result"></p>
+	  <p id="realTarget-result"></p>
+	  <p id="target-result"></p>
+	</div>
+	<div id="container">
+	  <ul>
+	    <li>
+	      <label for="deposit-input">Deposit :</label>
+	      <input id="deposit-input" type="number" placeholder="Enter the amount you are starting with..">
+	      <span id="deposit-text-warning"></span>
+	  
+	  
+	    </li>
+	    
+	    <li>
+	      <label for="percentage-input">Percentage :</label>
+	      <input id="percentage-input"type="number" placeholder="Enter the percentage...">
+	      <span id="percentage-text-warning"></span>
+	    </li>
+	    <li>
+	      <button onclick="calculateTarget()">Calculate Target</button>
+	    </li>
+	  </ul>
+	  
+	</div>
+	<hr>
+	<a class="calculate-percentage-text" href="percentage.html">Calculate percentage of profit..</a>
+	<hr>
+	<a href="https://www.forexfactory.com/">
+	  <button >Check news</button>
+	</a>
+	</div>
+  <script src="js/index.js"></script>
+</body>
+</html>

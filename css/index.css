@@ -1,0 +1,97 @@
+:root{
+  --offWhite1:hsl(0,0%,97%);
+  --offWhite2:hsl(0,0%,95%);
+  --offWhite3:hsl(0,0%,90%);
+  --myGreen:hsl(90,60%,30%);
+  --Myred:hsl(10,60%,40%);
+  --myGrey:hsl(240,3%,40%);
+}
+.contents-div{
+  margin: 1% 3%;
+  display: flex;
+  padding: 0% 3%;
+  border-radius: 25px;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 2px 2px 10px black;
+}
+
+table{
+  background-color: var(--offWhite3);
+  text-align: center;
+  border: 1px solid;
+  border-collapse: collapse;
+}
+.description-text{
+
+  margin-bottom: 0;
+}
+td,th{
+  padding: 2px;
+  border: 1px solid;
+  
+}
+body{
+  margin: 0px;
+}
+#results-div{
+  text-align: center;
+  border-radius: 10px;
+  background-color: var(--offWhite2);
+  margin: 5px 0px;
+  
+}
+#results-div p{
+  font-weight: bold;
+  margin : 1px;
+}
+
+#container{
+  margin-top: 0;
+  border-radius: 10px;
+
+}
+hr{
+  margin: 0;
+  width: 100%;
+  border: 0.5px solid;
+}
+ul{
+  padding: 0px;
+  list-style-type: none;
+}
+li{
+  padding-block: 5px 2px;
+}
+
+input{
+  border: 2px solid;
+  border-radius: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 15px;
+  padding:10px 5px;
+}
+span{
+  color: var(--Myred);
+}
+button{
+  font-weight: bold;
+  background-color: var(--myGreen);
+  width: 100%;
+  border-radius: 10px;
+  border: none;
+  color: white;
+  padding: 10px;
+}
+a button{
+  margin: 10px 0px;
+  background-color: var(--Myred);
+}
+.calculate-percentage-text{
+  margin-bottom: 2px;
+  text-align: center;
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+}
