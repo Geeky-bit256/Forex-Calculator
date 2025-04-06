@@ -3,6 +3,10 @@ const depositResults = document.getElementById("deposit-result");
 const percentageResult = document.getElementById("percentage-result");
 const realTargetResult = document.getElementById("realTarget-result");
 const targetResult = document.getElementById("target-result");
+//RESULTS DIV
+const resultsDiv = document.getElementById("results-div");
+
+
 
 
 //SPANS
@@ -22,6 +26,8 @@ const percentageInput = document.getElementById("percentage-input").value;
   if(depositInput.trim() !== "" && percentageInput.trim() !== ""){
     const target = depositAmount * (percentageAmount /100);
     const realTarget = depositAmount * (percentageAmount /100) - depositAmount;
+    
+    resultsDiv.style.display = 'block';
     
     depositResults.textContent = `Deposit : R${depositAmount.toLocaleString("en-Za",{minimumFractionDigits :2 ,maximumFractionDigits : 2})}`;
     percentageResult.textContent = `Percentage : ${percentageAmount}%`;

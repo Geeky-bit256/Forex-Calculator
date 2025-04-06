@@ -3,6 +3,8 @@ const depositResults = document.getElementById("deposit-result");
 const profitResult = document.getElementById("profit-result");
 const realPercentageResult = document.getElementById("real-percentage-result");
 const percentageResult = document.getElementById("percentage-result");
+//RESULTS DIV
+const resultsDiv = document.getElementById("results-div");
 
 
 //SPANS
@@ -23,6 +25,8 @@ const profitInput = document.getElementById("profit-input").value;
     const profitMade = profitAmount - depositAmount;
     const percent = (profitMade/depositAmount) * 100;
     const userPercent = (profitAmount/depositAmount) * 100;
+    
+    resultsDiv.style.display = 'block';
     
     depositResults.textContent = `Deposit : R${depositAmount.toLocaleString("en-Za",{minimumFractionDigits :2 ,maximumFractionDigits : 2})}`;
     profitResult.textContent = `Profit : R${profitAmount.toLocaleString("en-Za",{minimumFractionDigits :2 ,maximumFractionDigits : 2})}`;
