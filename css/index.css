@@ -2,6 +2,7 @@
   --offWhite1:hsl(0,0%,97%);
   --offWhite2:hsl(0,0%,95%);
   --offWhite3:hsl(0,0%,90%);
+  --offWhite4:hsl(0,0%,40%);
   --myGreen:hsl(90,60%,30%);
   --Myred:hsl(10,60%,30%);
   --MyredSpan:hsl(10,60%,40%);
@@ -64,7 +65,7 @@ ul{
 li{
   padding-block: 5px 2px;
 }
-input{
+ul input{
   animation-name: slideUp;
   animation-duration: 1s;
   border: 2px solid;
@@ -87,6 +88,21 @@ button{
   border: none;
   color: white;
   padding: 15px;
+}
+.radios-div{
+  display: flex;
+  justify-content: center ;
+  align-items: center;
+  border-radius:10px ;
+  padding: 10px 0px;
+  font-weight: bold;
+  border: 2px solid var(--offWhite4);
+  margin-bottom: 5px;
+  background-color: var(--offWhite3);
+}
+input[type=radio]{
+  accent-color: var(--Myred);
+  margin: 0px 10px;
 }
 a button{
   margin: 5px 0px;

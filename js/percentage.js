@@ -28,8 +28,8 @@ const profitInput = document.getElementById("profit-input").value;
     
     resultsDiv.style.display = 'block';
     
-    depositResults.textContent = `Deposit : R${depositAmount.toLocaleString("en-Za",{minimumFractionDigits :2 ,maximumFractionDigits : 2})}`;
-    profitResult.textContent = `Profit : R${profitAmount.toLocaleString("en-Za",{minimumFractionDigits :2 ,maximumFractionDigits : 2})}`;
+    depositResults.textContent = `Deposit : ${depositAmount.toLocaleString("en-Za",{minimumFractionDigits :2 ,maximumFractionDigits : 2})}`;
+    profitResult.textContent = `Profit : ${profitAmount.toLocaleString("en-Za",{minimumFractionDigits :2 ,maximumFractionDigits : 2})}`;
     realPercentageResult.textContent = ` Percentage : ${percent.toLocaleString("en-Za",{minimumFractionDigits :2 ,maximumFractionDigits : 2})}%`;
     percentageResult.textContent = `Deposit + Profit | Percentage : ${userPercent.toLocaleString("en-Za",{minimumFractionDigits :2 ,maximumFractionDigits : 2})}%`;
     

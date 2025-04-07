@@ -8,11 +8,17 @@ const resultsDiv = document.getElementById("results-div");
 
 
 
-
 //SPANS
 const depositTextWarning = document.getElementById("deposit-text-warning");
 const percentageTextWarning = document.getElementById("percentage-text-warning");
 
+let selectedCurrency = "zar"
+//RADIO BUTTONS
+const radioButtons = document.querySelectorAll('input[name="currency"]');
+
+radioButtons.forEach((radioButton) => {
+  radioButton.addEventListener('change',() => {selectedCurrency = radioButton.value;})
+} );
 
 function calculateTarget(){
 // TEXT INPUTS
@@ -29,10 +35,28 @@ const percentageInput = document.getElementById("percentage-input").value;
     
     resultsDiv.style.display = 'block';
     
-    depositResults.textContent = `Deposit : R${depositAmount.toLocaleString("en-Za",{minimumFractionDigits :2 ,maximumFractionDigits : 2})}`;
-    percentageResult.textContent = `Percentage : ${percentageAmount}%`;
+    //Switch between the selected currency
+    switch(selectedCurrency){
+      case 'usc' : 
+        depositResults.textContent = `Deposit : ${depositAmount.toLocaleString("en-Za",{minimumFractionDigits :2 ,maximumFractionDigits : 2})} USC`;
+    percentageResult.textContent = `Percentage : ${percentageAmount.toLocaleString("en-Za",{minimumFractionDigits :2 ,maximumFractionDigits : 2})}%`;
+    realTargetResult.textContent = `Target : ${realTarget.toLocaleString("en-Za",{minimumFractionDigits :2 ,maximumFractionDigits : 2})} USC`;
+    targetResult.textContent = `Deposit + Target : ${target.toLocaleString("en-Za",{minimumFractionDigits :2 ,maximumFractionDigits : 2})} USC`;
+        break;
+      case 'zar' : 
+        depositResults.textContent = `Deposit : R${depositAmount.toLocaleString("en-Za",{minimumFractionDigits :2 ,maximumFractionDigits : 2})}`;
+    percentageResult.textContent = `Percentage : ${percentageAmount.toLocaleString("en-Za",{minimumFractionDigits :2 ,maximumFractionDigits : 2})}%`;
     realTargetResult.textContent = `Target : R${realTarget.toLocaleString("en-Za",{minimumFractionDigits :2 ,maximumFractionDigits : 2})}`;
     targetResult.textContent = `Deposit + Target : R${target.toLocaleString("en-Za",{minimumFractionDigits :2 ,maximumFractionDigits : 2})}`;
+        break;
+      case 'usd' : 
+        depositResults.textContent = `Deposit : ${depositAmount.toLocaleString("en-Za",{minimumFractionDigits :2 ,maximumFractionDigits : 2})} USD`;
+    percentageResult.textContent = `Percentage : ${percentageAmount.toLocaleString("en-Za",{minimumFractionDigits :2 ,maximumFractionDigits : 2})}%`;
+    realTargetResult.textContent = `Target : ${realTarget.toLocaleString("en-Za",{minimumFractionDigits :2 ,maximumFractionDigits : 2})} USD`;
+    targetResult.textContent = `Deposit + Target : ${target.toLocaleString("en-Za",{minimumFractionDigits :2 ,maximumFractionDigits : 2})} USD`;
+        break;
+    }
+    
     
     
     //Reset span
